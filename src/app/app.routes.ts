@@ -1,3 +1,33 @@
 import { Routes } from '@angular/router';
+import { Home } from './common/home/home';
+import { Groceries } from './common/groceries/groceries';
+import { Clothen } from './common/clothen/clothen';
+import { Register } from './common/register/register';
+import { Toiletries } from './common/toiletries/toiletries';
+import { Login } from './common/login/login';
+import { PageNotFound } from './page-not-found/page-not-found';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {
+        path: '',component: Home
+    },
+    {
+        path: 'groceries', component: Groceries
+    },
+    {
+        path: 'clothen', component: Clothen
+    },
+    {
+        path: 'register', component: Register
+    },
+    {
+        path: 'toiletries', component: Toiletries
+    },
+    {
+        path: 'login',component: Login
+    },
+    {
+        path: '**', component: PageNotFound
+    },
+    
+];
