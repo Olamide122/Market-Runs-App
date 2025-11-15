@@ -13,6 +13,7 @@ mat-drawer-container {
   z-index: 2;
   width: 100%;
   margin-bottom: 5px;
+  height: 20%;
 }
 .example-icon  {
   color: white;
@@ -47,3 +48,8 @@ mat-drawer-container {
   width: 100% ;
   /* background-color: #1e88e5; */
 }
+
+/* .homeside {
+  display: flex;
+  flex-direction: column;
+} */
