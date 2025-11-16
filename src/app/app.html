@@ -10,8 +10,7 @@
     </mat-list>
   </mat-drawer>
   <mat-drawer-content class="homeside">
-    @if (showmenu){
-      <mat-toolbar class="mat-toolbar">
+     @if (showmenu) {<mat-toolbar class="mat-toolbar">
       <button mat-icon-button class="example-icon" (click)="drawer.toggle()"
         aria-label="Example icon-button with menu icon">
         <mat-icon class="menu">menu</mat-icon>
@@ -25,8 +24,7 @@
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>share</mat-icon>
       </button>
-    </mat-toolbar>
-    }
+    </mat-toolbar>} 
     
     <router-outlet></router-outlet>
   </mat-drawer-content>

@@ -18,22 +18,21 @@ export class App{
   isNavbarOpen: boolean = false;
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
-  }
-
-  showmenu: boolean = true;
-  constructor(private router: Router) {}
-
-
-  ngOnInit() {
-    let currenturl = this.router.url;
-    if (currenturl === '/login') {
-      this.showmenu = false;
-    } else {
-      this.showmenu = true;
-    }
-  }
-}
   
+
+  }
+  showmenu: boolean= (true);
+
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+      if (this.router.url === '/login') {
+        this.showmenu = false;
+      } else {
+        this.showmenu = true;
+      }
+    });
+}
+}  
 
 
 
