@@ -19,15 +19,17 @@ export class App{
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
+
+  showmenu: boolean = true;
   constructor(private router: Router) {}
 
 
   ngOnInit() {
     let currenturl = this.router.url;
     if (currenturl === '/login') {
-      this.isNavbarOpen = false;
+      this.showmenu = false;
     } else {
-      this.isNavbarOpen = true;
+      this.showmenu = true;
     }
   }
 }
