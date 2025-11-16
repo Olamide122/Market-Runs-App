@@ -33,7 +33,7 @@ mat-drawer-container {
   margin: 0px;
   border: none;
   transition: transform 0.3s ease-in-out;
-  box-shadow: #e0e0e0 5px 5px 5px 5px;
+  box-shadow: #e0e0e0 3px 3px 3px 3px;
   position:absolute;
   color: #548f73;
 }
@@ -47,6 +47,12 @@ mat-drawer-container {
 .mat-mdc-button {
   width: 100% ;
   /* background-color: #1e88e5; */
+}
+.list {
+  margin-top: 50px;
+}
+.logout {
+  width: 0%;
 }
 
 /* .homeside {

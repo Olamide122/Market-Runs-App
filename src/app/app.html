@@ -1,6 +1,6 @@
 <mat-drawer-container class="container">
   <mat-drawer #drawer mode="side" [(opened)]="isNavbarOpen" class="content">
-    <mat-list role="list">
+    <mat-list role="list" class="list">
       <mat-list-item role="listitem"><a mat-button routerLink="/">Home</a></mat-list-item>
       <mat-list-item role="listitem"><a mat-button routerLink="./groceries">Groceries</a></mat-list-item>
       <mat-list-item role="listitem"> <a mat-button routerLink="./clothen">Clothen</a></mat-list-item>
@@ -10,14 +10,15 @@
     </mat-list>
   </mat-drawer>
   <mat-drawer-content class="homeside">
-    <mat-toolbar class="mat-toolbar">
+    @if (isNavbarOpen){
+      <mat-toolbar class="mat-toolbar">
       <button mat-icon-button class="example-icon" (click)="drawer.toggle()"
         aria-label="Example icon-button with menu icon">
         <mat-icon class="menu">menu</mat-icon>
       </button>
       <span>Menu</span>
       <span class="example-spacer"></span>
-      <!-- <a mat-button routerLink="./login">Login</a> -->
+      <a mat-button routerLink="./login" class="logout">Logout</a>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
       </button>
@@ -25,6 +26,8 @@
         <mat-icon>share</mat-icon>
       </button>
     </mat-toolbar>
+    }
+    
     <router-outlet></router-outlet>
   </mat-drawer-content>
   

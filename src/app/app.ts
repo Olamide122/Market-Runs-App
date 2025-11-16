@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet, RouterLink} from '@angular/router';
+import { RouterOutlet, RouterLink, Router } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,7 +19,18 @@ export class App{
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
+  constructor(private router: Router) {}
+
+
+  ngOnInit() {
+    let currenturl = this.router.url;
+    if (currenturl === '/login') {
+      this.isNavbarOpen = false;
+    } else {
+      this.isNavbarOpen = true;
+    }
   }
+}
   
 
 
