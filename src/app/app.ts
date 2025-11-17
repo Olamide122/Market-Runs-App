@@ -23,7 +23,7 @@ export class App{
 
   constructor(private router: Router) {
     router.events.subscribe((val) => {
-      if (this.router.url === '/login') {
+      if (this.router.url === '/login' || this.router.url === '/register') {
         this.showmenu = false;
         this.isNavbarOpen = false;
       } else {
