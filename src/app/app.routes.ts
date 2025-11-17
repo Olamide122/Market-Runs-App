@@ -9,7 +9,7 @@ import { PageNotFound } from './page-not-found/page-not-found';
 
 export const routes: Routes = [
     {
-        path: '',component: Home
+        path: '', component: Home
     },
     {
         path: 'groceries', component: Groceries

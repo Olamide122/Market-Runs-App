@@ -9,26 +9,26 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
-  // standalone: true,
   imports: [RouterOutlet, MatListModule, MatSidenavModule, MatButtonModule, MatIconModule, MatToolbarModule, RouterLink],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
 export class App{
   isNavbarOpen: boolean = false;
+  showmenu: boolean = true;
+  
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
-  
-
   }
-  showmenu: boolean= (true);
 
   constructor(private router: Router) {
     router.events.subscribe((val) => {
       if (this.router.url === '/login') {
         this.showmenu = false;
+        this.isNavbarOpen = false;
       } else {
         this.showmenu = true;
+        this.isNavbarOpen = true;
       }
     });
 }
