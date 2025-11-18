@@ -25,13 +25,5 @@ export class Login {
       // Perform login action
       console.log('Login successful');
     }
-
-  // onSubmit() {
-  //   const username = this.loginForm.get('username')?.value;
-  //   const password = this.loginForm.get('password')?.value;
-  //   console.log('Login attempt:', { username, password });
-  //   // Add authentication logic here
   }
-
- 
 }

@@ -8,8 +8,15 @@ import { Login } from './common/login/login';
 import { PageNotFound } from './page-not-found/page-not-found';
 
 export const routes: Routes = [
+    // {
+    //     path: '', component: Login, pathMatch: "full"
+    // },
     {
-        path: '', component: Home
+        path: 'home', component: Home
+    },
+
+     {
+        path: '', component: Login,
     },
     {
         path: 'groceries', component: Groceries
@@ -23,9 +30,7 @@ export const routes: Routes = [
     {
         path: 'toiletries', component: Toiletries
     },
-    {
-        path: 'login',component: Login
-    },
+    
     {
         path: '**', component: PageNotFound
     },
