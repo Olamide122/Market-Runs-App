@@ -36,8 +36,8 @@ export class Login {
   }
 
   _logindata:Loginmodel={
-    username: '',
-    password: ''
+    username: 'admin',
+    password: 'admin'
   }
 
   toLogin(form: any){
@@ -45,7 +45,6 @@ export class Login {
       this.service.toLogin(this._logindata).subscribe(item=> {
         let __resp = item;
         if(__resp.length>0){
-          console.log(item)
           this.router.navigateByUrl('/home');
         }else{
           alert("INVALID CREDENTIALS")
