@@ -1,11 +1,10 @@
-/* @use '@angular/material' as mat */
+
 .image {
     display: block;
-    /* margin-top: 10%; */
     margin-left: 25%;
     width: 50%;
     height: 60%;
-    /* opacity: 0.2; */
+    
 }
 .header h1 {
     color: #388d65;

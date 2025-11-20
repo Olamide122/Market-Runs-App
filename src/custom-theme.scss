@@ -16,33 +16,17 @@ html {
 }
 
 :root {
-  @include mat.sidenav-overrides(( 
-    container-background-color: white,
-    ));
-}
-
-:root {
-  @include mat.toolbar-overrides ((
-    container-text-color: white,
-  ));
-}
-:root {
   @include mat.button-overrides((
-    text-label-text-color: #548f73,
+    protected-label-text-color: #fff,
+    protected-container-color: #388c65,
+    text-label-text-color:#388c65
   ));
 }
-// :root {
-//   @include mat.form-field-overrides((
-//     disabled-input-text-placeholder-color: orange,
-//     disabled-leading-icon-color: red,
-//     outlined-error-outline-color: red,
-//   ));
-// }
-
-
-
-
-
+:root {
+  @include mat.toolbar-overrides((
+    container-text-color: #fff,
+  ));
+}
 
 body {
   // Default the application to a light color theme. This can be changed to

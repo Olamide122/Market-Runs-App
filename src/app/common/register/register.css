@@ -2,8 +2,8 @@
     width: 100%;
 }
 .mat-mdc-raised-button {
-    /* color:#76d6a9; */
     margin: 2%;
+    color: #155738;
 }
 .mat-mdc-card-header {
     font-size: 20px;
