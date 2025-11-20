@@ -46,7 +46,7 @@ export class Login {
         let __resp = item;
         if(__resp.length>0){
           console.log(item)
-          this.router.navigateByUrl('');
+          this.router.navigateByUrl('/home');
         }else{
           alert("INVALID CREDENTIALS")
         }
