@@ -4,7 +4,10 @@ export interface Loginmodel {
 }
 export interface user {
     id:string
-    name:string
-    password:string 
+    password:string
+    confirmPassword:string
+    email:string
+    homeAddess:string
+    phoneNumber:string
     
 }

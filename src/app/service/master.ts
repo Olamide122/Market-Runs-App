@@ -9,11 +9,15 @@ export class Master {
 
   constructor(private http: HttpClient) { }
   toLogin(_data: Loginmodel) {
-
     return this.http.get<user[]>('http://localhost:3000/user?id=' + _data.username + '&&password=' + _data.password);
 
   }
-  isLoggedIn(){
+  isLoggedIn() {
     return localStorage.getItem("username") != null;
+  }
+
+  isRegistered(_data: user) {
+    return this.http.post('http://localhost:3000/user', _data);
+
   }
 }

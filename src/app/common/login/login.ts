@@ -38,8 +38,8 @@ export class Login implements OnInit{
   }
 
   _logindata:Loginmodel={
-    username: 'admin',
-    password: 'admin'
+    username: '',
+    password: ''
   }
 
   toLogin(form: any){

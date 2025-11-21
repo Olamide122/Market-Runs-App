@@ -1,9 +1,15 @@
 {
-    "user": [
-        {
-            "id": "admin",
-            "name": "admin",
-            "password": "admin"
-        }
-    ]
+  "user": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "password": "admin"
+    },
+    {
+      "id": "admin",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "email": "asask@nsmn"
+    }
+  ]
 }
