@@ -2,8 +2,8 @@
     "user": [
         {
             "id": "admin",
-            "username": "admin",
-            "passord": "admin"
+            "name": "admin",
+            "password": "admin"
         }
     ]
 }

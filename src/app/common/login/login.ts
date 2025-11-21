@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
   styleUrl: './login.css',
 })
 
-export class Login {
+export class Login implements OnInit{
 //  constructor() {}
 
 //   loginForm = new FormGroup({
@@ -32,7 +32,9 @@ export class Login {
 //     }
 //   }
   constructor(private service: Master,private router:Router ){
-
+  }
+  ngOnInit(): void {
+    localStorage.clear();
   }
 
   _logindata:Loginmodel={
@@ -45,9 +47,11 @@ export class Login {
       this.service.toLogin(this._logindata).subscribe(item=> {
         let __resp = item;
         if(__resp.length>0){
+          console.log(__resp)
+          localStorage.setItem('username',this._logindata.username);
           this.router.navigateByUrl('/home');
         }else{
-          alert("INVALID CREDENTIALS")
+          alert("INVALID CREDENTIALS");
         }
       })
     }
